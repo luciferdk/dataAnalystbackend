@@ -1,0 +1,1 @@
+{"root":["./src/app.ts","./src/controller/controller.covid.ts","./src/controller/controller.health.ts","./src/routes/routesData.ts"],"version":"5.8.3"}
