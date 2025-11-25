@@ -1,29 +1,46 @@
 {
-  "name": "backend",
+  "name": "data-analyt-backend",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "build": "tsc -b",
     "start": "node dist/app.js",
-    "dev": "tsc && node dist/app.js"
+    "dev": "tsc && node dist/app.js",
+    "lint": "eslint . --ext .ts",
+    "migrate": "ts-node src/services/migrate.ts",
+    "import:health": "ts-node src/services/importHealthData.ts",
+    "import:covid": "ts-node src/services/importCovidData.ts",
+    "import:prediction": "ts-node src/services/importPredictionData.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.8.1",
     "cors": "^2.8.5",
     "csv-parser": "^3.2.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "pg": "^8.16.3",
+    "rate-limit-redis": "^4.3.0",
+    "redis": "^5.10.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/compression": "^1.8.1",
     "@types/cors": "^2.8.19",
     "@types/dotenv": "^6.1.1",
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.7.2",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "@types/pg": "^8.15.6",
     "@types/xlsx": "^0.0.35",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "eslint": "^9.39.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
