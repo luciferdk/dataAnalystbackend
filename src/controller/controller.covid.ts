@@ -13,7 +13,7 @@ interface CovidRow {
   Active: string;
   NewCases: string;
   NewDeaths: string;
-  NerRecovered: string;
+  NewRecovered: string;
 }
 
 export default async function getCovidData(
